@@ -12,6 +12,9 @@ export const initialState = {
   user: null,
 };
 
+export const getBascketTotal = (bascket) =>
+  bascket.reduce((amount, item) => item.price + amount, 0);
+
 function reducer(state, action) {
   switch (action.type) {
     case "ADD_TO_BASCKET":
@@ -24,7 +27,7 @@ function reducer(state, action) {
       break;
 
     case "REMOVE_FROM_BASCKET":
-      console.log(action.id);
+      // console.log(action.id);
       let newBascket = [...state.bascket];
       const index = state.bascket.findIndex(
         (bascketItem) => bascketItem.id === action.id
