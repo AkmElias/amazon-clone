@@ -13,6 +13,22 @@ function Home() {
       />
       <div className="home__row">
         <Product
+          id="12311213"
+          title="iOttie Easy One Touch 4 Dash & Windshield Car Mount Phone Holder Desk Stand Pad & Mat for iPhone, Samsung, Moto, Huawei, Nokia, LG, Smartphones"
+          price={56.63}
+          rating={4}
+          image="https://m.media-amazon.com/images/I/718NVofDrCL._AC_UY218_.jpg"
+        />
+        <Product
+          id="12311215"
+          title="Bose A20 Aviation Headset with Bluetooth Dual Plug Cable, Black"
+          price={11.98}
+          rating={4}
+          image="https://m.media-amazon.com/images/I/71ekWFCunfL._AC_UY218_.jpg"
+        />
+      </div>
+      <div className="home__row">
+        <Product
           id="12311211"
           title="Samsung Galaxy Buds+ Plus, True Wireless Earbuds w/improved battery and call quality 
           (Wireless Charging Case included), Black – US Version"
@@ -28,28 +44,12 @@ function Home() {
           rating={5}
           image="https://m.media-amazon.com/images/I/51IdLe-+6kL._AC_UY218_.jpg"
         />
-      </div>
-      <div className="home__row">
         <Product
           id="12311213"
           title="iOttie Easy One Touch 4 Dash & Windshield Car Mount Phone Holder Desk Stand Pad & Mat for iPhone, Samsung, Moto, Huawei, Nokia, LG, Smartphones"
           price={56.63}
           rating={4}
           image="https://m.media-amazon.com/images/I/718NVofDrCL._AC_UY218_.jpg"
-        />
-        <Product
-          id="12311214"
-          title="SCOSCHE MAGDMB MagicMount Universal Magnetic Mount Holder for Mobile Devices In Frustration Free Packaging, Black"
-          price={155.5}
-          rating={5}
-          image="https://m.media-amazon.com/images/I/51Ybp5nJHbL._AC_UY218_.jpg"
-        />
-        <Product
-          id="12311215"
-          title="Bose A20 Aviation Headset with Bluetooth Dual Plug Cable, Black"
-          price={11.98}
-          rating={4}
-          image="https://m.media-amazon.com/images/I/71ekWFCunfL._AC_UY218_.jpg"
         />
       </div>
       <div className="home__row">

@@ -41,7 +41,11 @@ function reducer(state, action) {
       }
       return { ...state, bascket: newBascket };
       break;
-
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
+      };
     default:
       return { ...state };
       break;
