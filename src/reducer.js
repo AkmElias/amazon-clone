@@ -1,14 +1,5 @@
 export const initialState = {
-  bascket: [
-    {
-      id: "12311214",
-      title:
-        "SCOSCHE MAGDMB MagicMount Universal Magnetic Mount Holder for Mobile Devices In Frustration Free Packaging, Black",
-      price: 155.5,
-      rating: 5,
-      image: "https://m.media-amazon.com/images/I/51Ybp5nJHbL._AC_UY218_.jpg",
-    },
-  ],
+  bascket: [],
   user: null,
 };
 
