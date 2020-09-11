@@ -1,13 +1,12 @@
-import React, { forwardRef, useRef } from "react";
-import FlipMove from "react-flip-move";
+import React, { forwardRef } from "react";
+
 import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
 
 const CheckoutProduct = forwardRef(
   ({ key, id, title, price, rating, image }, ref) => {
     const [{ bascket }, dispatch] = useStateValue();
-    const itemRef = useRef(null);
-
+    console.log(ref);
     const removeFromBascket = () => {
       dispatch({
         type: "REMOVE_FROM_BASCKET",

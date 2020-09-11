@@ -1,6 +1,15 @@
 .checkoutProduct {
   display: flex;
-  margin: 20px 0;
+  margin: 20px 10px;
+  padding-inline-end: 20px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+.checkoutProduct:hover {
+  transform: scale(1.03);
 }
 
 .checkoutProduct__image {

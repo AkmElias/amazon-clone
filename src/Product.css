@@ -5,11 +5,19 @@
   justify-content: flex-end;
   max-height: 400px;
   min-width: 100px;
+  border-radius: 3px;
   background-color: white;
   width: 100%;
   margin: 10px;
   padding: 20px;
   z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  /* background-color: #838383; */
+  /* overflow: hidden; */
 }
 
 .product__info {

@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c0c17;
+  height: 220px;
+  margin-top: -10px;
+}
+
+.footer__info > h2 {
+  color: #fff;
+  margin: 20px 0px;
+  font-weight: 800;
+  letter-spacing: 0px;
+  font-size: 40px;
+  font: 3em Poppins;
+}
+
+.footer__copyright {
+  border-top: 1px solid #1d1d27;
+  font: 1em Poppins;
+  color: #838383;
+  padding: 10px;
+}
