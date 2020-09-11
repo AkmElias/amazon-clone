@@ -10,7 +10,7 @@ function Subtotal() {
   const history = useHistory();
   return (
     <div className="subtotal">
-      <CurrencyFormat
+      {/* <CurrencyFormat
         renderText={(value) => (
           <div>
             <p>
@@ -25,6 +25,24 @@ function Subtotal() {
         decimalScale={2}
         displayType={"text"}
         thousanSeparator={true}
+        prefix={"$"}
+      /> */}
+      <CurrencyFormat
+        renderText={(value) => (
+          <div>
+            <p>
+              Subtotal ({bascket?.length} items) :{" "}
+              <strong>{` $ ${getBascketTotal(bascket)}`}</strong>
+            </p>
+            <small className="subtotal__gift">
+              <input type="checkbox" /> This order contains gift.
+            </small>
+          </div>
+        )}
+        decimalScale={2}
+        value={getBascketTotal(bascket)}
+        displayType={"text"}
+        thousandSeparator={true}
         prefix={"$"}
       />
       <button onClick={(e) => history.push("/payment")}>

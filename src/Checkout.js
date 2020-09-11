@@ -16,7 +16,7 @@ const Checkout = () => {
           alt="add"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSBEJ1GJhII2q0YCM1liyiKCqurTogwcU1ypQ&usqp=CAU"
         />
-        <h4>Hello, {user && user.email} </h4>
+        <h4>Hello, {user?.email ? user.email : `Guest`} </h4>
         {bascket?.length === 0 ? (
           <div>
             <h2 className="checkout__title">Your shopping bascket is empty</h2>

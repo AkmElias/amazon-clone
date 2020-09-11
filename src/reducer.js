@@ -16,7 +16,11 @@ function reducer(state, action) {
         bascket: [...state.bascket, action.item],
       };
       break;
-
+    case "EMPTY_BASCKET":
+      return {
+        ...state,
+        basket: [],
+      };
     case "REMOVE_FROM_BASCKET":
       // console.log(action.id);
       let newBascket = [...state.bascket];
