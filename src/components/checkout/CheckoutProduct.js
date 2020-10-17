@@ -1,11 +1,11 @@
 import React, { forwardRef } from "react";
 
 import "./CheckoutProduct.css";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../globalState/StateProvider";
 
 const CheckoutProduct = forwardRef(
   ({ key, id, title, price, rating, image, hideButton }, ref) => {
-    const [{ bascket }, dispatch] = useStateValue();
+    const [dispatch] = useStateValue();
     console.log(ref);
     const removeFromBascket = () => {
       dispatch({

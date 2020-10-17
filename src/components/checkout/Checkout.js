@@ -1,6 +1,7 @@
 import React from "react";
 import FlipMove from "react-flip-move";
-import { useStateValue } from "./StateProvider";
+
+import { useStateValue } from "../../globalState/StateProvider";
 import "./Checkout.css";
 import CheckoutProduct from "./CheckoutProduct";
 import Subtotal from "./Subtotal";
@@ -20,7 +21,6 @@ const Checkout = () => {
         {bascket?.length === 0 ? (
           <div>
             <h2 className="checkout__title">Your shopping bascket is empty</h2>
-
             <p>
               You have no items in your bascket. To buy one or more product "Add
               to bascket" next to the item
@@ -29,7 +29,6 @@ const Checkout = () => {
         ) : (
           <div>
             <h2 className="checkout__title">Your shopping bascket.</h2>
-            {/* list out all of the checkout products */}
             <FlipMove>
               {bascket?.map((item) => (
                 <CheckoutProduct

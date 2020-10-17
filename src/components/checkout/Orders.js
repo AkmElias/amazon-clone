@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { db } from "./firebase";
+
+import { db } from "../../firebase/firebase";
 import "./Orders.css";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../globalState/StateProvider";
 import Order from "./Order";
 
 function Orders() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ user }] = useStateValue();
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+
 function Footer() {
   return (
     <div className="footer">
@@ -11,8 +12,6 @@ function Footer() {
       <div className="footer__info">
         <h2>AMAZON</h2>
       </div>
-      {/* <hr /> */}
-
       <div className="footer__copyright">
         <p>&copy;amazon 2020 copyright all right reserved</p>
       </div>

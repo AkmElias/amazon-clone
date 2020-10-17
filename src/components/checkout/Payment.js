@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { useStateValue } from "./StateProvider";
 import { Link, useHistory } from "react-router-dom";
-import CheckoutProduct from "./CheckoutProduct";
-import "./Payment.css";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
-import { getBascketTotal } from "./reducer";
-import axios from "./axios";
-import { db } from "./firebase";
+
+import { useStateValue } from "../../globalState/StateProvider";
+import CheckoutProduct from "./CheckoutProduct";
+import "./Payment.css";
+import { getBascketTotal } from "../../globalState/reducer";
+import axios from "../../firebase/axios";
+import { db } from "../../firebase/firebase";
 
 function Payment() {
   const [{ bascket, user }, dispatch] = useStateValue();
@@ -76,8 +77,6 @@ function Payment() {
   };
 
   const handleChange = (event) => {
-    // Listen for changes in the CardElement
-    // and display any errors as the customer types their card details
     setDisabled(event.empty);
     setError(event.error ? event.error.message : "");
   };
@@ -88,8 +87,6 @@ function Payment() {
         <h1>
           Checkout (<Link to="/checkout">{bascket?.length} items</Link>)
         </h1>
-
-        {/* Payment section - delivery address */}
         <div className="payment__section">
           <div className="payment__title">
             <h3>Delivery Address</h3>
@@ -100,8 +97,6 @@ function Payment() {
             <p>Los Angeles, CA</p>
           </div>
         </div>
-
-        {/* Payment section - Review Items */}
         <div className="payment__section">
           <div className="payment__title">
             <h3>Review items and delivery</h3>
@@ -118,18 +113,13 @@ function Payment() {
             ))}
           </div>
         </div>
-
-        {/* Payment section - Payment method */}
         <div className="payment__section">
           <div className="payment__title">
             <h3>Payment Method</h3>
           </div>
           <div className="payment__details">
-            {/* Stripe magic will go */}
-
             <form onSubmit={handleSubmit}>
               <CardElement onChange={handleChange} />
-
               <div className="payment__priceContainer">
                 <CurrencyFormat
                   renderText={(value) => <h3>Order Total: {value}</h3>}
@@ -143,8 +133,6 @@ function Payment() {
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
               </div>
-
-              {/* Errors */}
               {error && <div>{error}</div>}
             </form>
           </div>

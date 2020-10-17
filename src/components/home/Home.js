@@ -1,6 +1,7 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+
 import "./Home.css";
 import Product from "./Product";
 
@@ -10,6 +11,7 @@ function Home() {
     "https://cdn.vox-cdn.com/thumbor/o9meVVKDNd6iDWySos_Jvben7ns=/0x0:2848x1549/1200x800/filters:focal(1197x548:1651x1002)/cdn.vox-cdn.com/uploads/chorus_image/image/52282307/AmazonPrimeVideo_com_HiRes.0.jpeg",
     "https://www.howtogeek.com/wp-content/uploads/2019/07/img_5d27922cd1b08.jpg",
   ];
+  
   return (
     <div className="home">
       <Slide>

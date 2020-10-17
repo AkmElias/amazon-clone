@@ -4,16 +4,18 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShopingBascketIcon from "@material-ui/icons/ShoppingBasket";
 
 import "./Header.css";
-import { useStateValue } from "./StateProvider";
-import { auth } from "./firebase";
+import { useStateValue } from "../../globalState/StateProvider";
+import { auth } from "../../firebase/firebase";
 
 function Header() {
   const [{ bascket, user }] = useStateValue([]);
+
   const login = () => {
     if (user) {
       auth.signOut();
     }
   };
+
   return (
     <div className="header">
       <Link to="/">
@@ -28,7 +30,6 @@ function Header() {
         <input type="text" className="header__searchInput" />
         <SearchIcon className="header__searchIcon" />
       </div>
-
       <div className="header__nav">
         <Link to={!user && "/login"} className="header__link">
           <div onClick={login} className="header__option">

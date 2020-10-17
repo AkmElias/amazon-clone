@@ -1,10 +1,10 @@
 import React from "react";
 
 import "./Product.css";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../globalState/StateProvider";
 
 function Product({ id, title, price, rating, image }) {
-  const [{ bascket }, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
   const addToBacket = () => {
     dispatch({
       type: "ADD_TO_BASCKET",
